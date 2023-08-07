@@ -70,18 +70,17 @@ provider "aws" {
 
 ## Diagram
 
-Automated AWS Infrastructure Deployment with Jenkins and Terraform
 
           +-----------------------+
           |                       |
-          |  Configure Jenkins   |
+          |  Configure Jenkins    |
           |                       |
           +-----------+-----------+
                       |
                       v
           +-----------------------+
           |                       |
-          |   Run Jenkins        |
+          |   Run Jenkins         |
           |   Pipeline            |
           |                       |
           +-----------+-----------+
@@ -94,15 +93,14 @@ Automated AWS Infrastructure Deployment with Jenkins and Terraform
           |                       |
           +-----------+-----------+
                       |
-                      | Plan Approved?
                       v
           +-----------------------+
           |                       |
-          | Review and Approve   |
+          | Review and Approve    |
           |  Terraform Plan       |
           |                       |
           +-----------+-----------+
-                      | No
+                      |
                       v
           +-----------------------+
           |                       |
