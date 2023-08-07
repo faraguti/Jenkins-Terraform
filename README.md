@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/faraguti/Jenkins-Terraform/assets/5418256/0e8a2207-d9ce-4e3c-ac11-757fb63136ea" height="100%" width="100%">
+</p>
+
 # Automated AWS Infrastructure Deployment with Jenkins and Terraform
 
 This project showcases the integration of Jenkins and Terraform for automating the deployment of AWS infrastructure. The Jenkins pipeline automates the provisioning of AWS resources using Terraform configurations provided in this repository.
