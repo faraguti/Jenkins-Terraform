@@ -15,7 +15,7 @@ The Jenkins pipeline defined in the `Jenkinsfile` automates the deployment proce
 
 ### Main Terraform Configuration (`main.tf`)
 
-```hcl
+```
 resource "aws_instance" "ec2-instance-1" {
   ami           = "ami-03f65b8614a860c29"
   instance_type = "t2.micro"
@@ -24,3 +24,36 @@ resource "aws_instance" "ec2-instance-1" {
     Name = "TF-Jenkins-Instance"
   }
 }
+```
+
+### Provider Configuration (provider.tf)
+
+```
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.11.0"
+    }
+  }
+}
+
+provider "aws" {
+    region = "us-west-2"  
+}
+```
+
+## Usage
+
+1. Configure your Jenkins server to use this repository for pipeline execution.
+2. Configure Jenkins pipeline parameters, including `autoApprove` for automatic apply.
+3. Run the Jenkins pipeline to initiate the deployment process.
+4. Review the generated Terraform plan and approve if necessary.
+5. The pipeline applies the changes to provision the AWS resources.
+
+## Notes
+
+- Ensure you update the AWS credentials and region in the Jenkins pipeline.
+- Adapt the pipeline stages and configurations to suit your deployment process.
+- Review and update the Terraform configuration to match your infrastructure requirements.
+
