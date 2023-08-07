@@ -41,7 +41,7 @@ resource "aws_instance" "ec2-instance-1" {
 
 ### Provider Configuration (provider.tf)
 
-```
+```hcl
 terraform {
   required_providers {
     aws = {
