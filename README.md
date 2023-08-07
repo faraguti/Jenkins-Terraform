@@ -68,19 +68,68 @@ provider "aws" {
 
 
 
-## Workflow Diagram
-```
-@startuml
-start
-:Configure Jenkins and Pipeline;
-:Run Jenkins Pipeline;
-:Generate Terraform Plan;
-if (Approval Needed?) then (yes)
-  :Review and Approve;
-  :Apply Terraform Changes;
-else (no)
-  :Apply Terraform Changes;
-endif
-stop
-@enduml
-```
+## Diagram
+
+Automated AWS Infrastructure Deployment with Jenkins and Terraform
+
+          +-----------------------+
+          |                       |
+          |  Configure Jenkins   |
+          |                       |
+          +-----------+-----------+
+                      |
+                      v
+          +-----------------------+
+          |                       |
+          |   Run Jenkins        |
+          |   Pipeline            |
+          |                       |
+          +-----------+-----------+
+                      |
+                      v
+          +-----------------------+
+          |                       |
+          | Generate Terraform    |
+          |      Plan             |
+          |                       |
+          +-----------+-----------+
+                      |
+                      | Plan Approved?
+                      v
+          +-----------------------+
+          |                       |
+          | Review and Approve   |
+          |  Terraform Plan       |
+          |                       |
+          +-----------+-----------+
+                      | No
+                      v
+          +-----------------------+
+          |                       |
+          |  Apply Terraform      |
+          |      Changes          |
+          |                       |
+          +-----------+-----------+
+                      |
+                      v
+          +-----------------------+
+          |                       |
+          | Provision AWS         |
+          |     Resources         |
+          |                       |
+          +-----------+-----------+
+                      |
+                      v
+          +-----------------------+
+          |                       |
+          | Configure EC2         |
+          |  with Tags            |
+          |                       |
+          +-----------------------+
+                      |
+                      v
+          +-----------------------+
+          |                       |
+          |  Resources Ready      |
+          |                       |
+          +-----------------------+
