@@ -6,10 +6,10 @@ This project showcases the integration of Jenkins and Terraform for automating t
 
 The Jenkins pipeline defined in the `Jenkinsfile` automates the deployment process using Terraform. It includes the following stages:
 
-1. **Git Checkout:** Clones the Terraform configuration repository from GitHub.
-2. **Plan:** Initializes Terraform and generates an execution plan.
-3. **Approval:** Optionally prompts for plan approval before applying changes.
-4. **Apply:** Applies the Terraform execution plan to provision AWS resources.
+1. `Git Checkout:` Clones the Terraform configuration repository from GitHub.
+2. `Plan:` Initializes Terraform and generates an execution plan.
+3. `Approval:` Optionally prompts for plan approval before applying changes.
+4. `Apply:` Applies the Terraform execution plan to provision AWS resources.
 
 ## Terraform Configuration
 
