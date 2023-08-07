@@ -70,7 +70,6 @@ provider "aws" {
 
 ## Workflow Diagram
 
-<!--
 @startuml
 start
 :Configure Jenkins and Pipeline;
@@ -84,4 +83,3 @@ else (no)
 endif
 stop
 @enduml
--->
