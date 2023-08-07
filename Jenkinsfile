@@ -10,12 +10,12 @@ pipeline {
 
    agent  any
     stages {
-        stage('checkout') {
+        stage('Git Checkout') {
             steps {
                  script{
                         dir("terraform")
                         {
-                            git "https://github.com/faraguti/Jenkins-Terraform.git"
+                            git branch: 'main', url: "https://github.com/faraguti/Jenkins-Terraform.git"
                         }
                     }
                 }
