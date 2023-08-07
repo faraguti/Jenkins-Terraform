@@ -66,3 +66,22 @@ provider "aws" {
 - Adapt the pipeline stages and configurations to suit your deployment process.
 - Review and update the Terraform configuration to match your infrastructure requirements.
 
+
+
+## Workflow Diagram
+
+<!--
+@startuml
+start
+:Configure Jenkins and Pipeline;
+:Run Jenkins Pipeline;
+:Generate Terraform Plan;
+if (Approval Needed?) then (yes)
+  :Review and Approve;
+  :Apply Terraform Changes;
+else (no)
+  :Apply Terraform Changes;
+endif
+stop
+@enduml
+-->
