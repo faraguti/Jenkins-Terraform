@@ -12,7 +12,7 @@ The Jenkins pipeline defined in the `Jenkinsfile` automates the deployment proce
 3. `Approval:` Optionally prompts for plan approval before applying changes.
 4. `Apply:` Applies the Terraform execution plan to provision AWS resources.
 
-<br> </br>
+</br>
 ## Terraform Configuration
 
 ### Main Terraform Configuration (`main.tf`)
