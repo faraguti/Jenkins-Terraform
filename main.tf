@@ -1,12 +1,11 @@
 provider "aws" {
-  region = "us-west-2"
+    region = "us-east-1"  
 }
 
-resource "aws_instance" "ec2-instance-1" {
-  ami           = "ami-03f65b8614a860c29"
+resource "aws_instance" "foo" {
+  ami           = "ami-05fa00d4c63e32376" # us-west-2
   instance_type = "t2.micro"
-
   tags = {
-    Name = "TF-Jenkins-Instance"
+      Name = "TF-Instance"
   }
 }
